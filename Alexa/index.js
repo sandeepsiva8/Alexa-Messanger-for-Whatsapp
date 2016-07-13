@@ -149,11 +149,11 @@ function getWelcomeResponse() {
     // If we wanted to initialize the session to have some attributes we could add those here.
     var sessionAttributes = {};
     var cardTitle = "Welcome";
-    var speechOutput = "Welcome to the DRONE CONTROL . ";
+    var speechOutput = "Welcome to the Alexa Messenger For Whatsapp . ";
 
     
 
-    var repromptText = "Drone ready for command.";
+    var repromptText = "Messenger is ready.";
     var shouldEndSession = false;
 
     ctx.succeed(buildResponse(sessionAttributes, buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession)));
