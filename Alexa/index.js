@@ -1,6 +1,3 @@
-/**
- * Control your APM / Pixhawk quadcopter with your voice, using Amazon Alexa, Lambda, 2lemetry MQTT.
- */
 
 var awsIot = require('aws-iot-device-sdk');
 var config = require("./config");
@@ -154,7 +151,7 @@ function getWelcomeResponse() {
     var cardTitle = "Welcome";
     var speechOutput = "Welcome to the DRONE CONTROL . ";
 
-    // TODO:  is drone online or offline?  If online, is it ARMED?
+    
 
     var repromptText = "Drone ready for command.";
     var shouldEndSession = false;
@@ -163,18 +160,16 @@ function getWelcomeResponse() {
 
 }
 
-/**
- *  handles GO intent.
- */
+
 
 function doTextIntent(intent, session, callback) {
-//    var cardTitle = "Drone Turn..." ;
+
     var repromptText = null;
     var sessionAttributes = {};
     var shouldEndSession = false;
     var speechOutput = "";
 
-    repromptText = "Tell me how you want to turn the drone.  ";
+    repromptText = "Tell me what you want to send.  ";
 
     var direction = intent.slots.Message.value;
     var Rotaion = intent.slots.Recepient.value;
